@@ -47,6 +47,8 @@ class Notepad:
         
         input_field = tk.Entry(top, font=('Lucida Console', '10'))
         input_field.grid(row=0, column=0, columnspan=4, padx=5, pady=5)
+        input_field.bind('<Return>', lambda event: self.calculate(input_field))
+
         
         buttons = ['7', '8', '9', '/',
                    '4', '5', '6', '*',
