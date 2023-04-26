@@ -48,14 +48,7 @@ class Notepad:
         input_field = tk.Entry(top, font=('Lucida Console', '10'))
         input_field.grid(row=0, column=0, columnspan=4, padx=5, pady=5)
         input_field.bind('<Return>', lambda event: self.calculate(input_field))
-        self.light_style = ttk.Style()
-        self.light_style.configure('TFrame', background='#ffffff')
-        self.light_style.configure('TLabel', background='#ffffff', foreground='#000000')
-        self.light_style.configure('TButton', background='#ffffff', foreground='#000000')
-        self.dark_style = ttk.Style()
-        self.dark_style.configure('TFrame', background='#1c1c1c')
-        self.dark_style.configure('TLabel', background='#1c1c1c', foreground='#ffffff')
-        self.dark_style.configure('TButton', background='#1c1c1c', foreground='#ffffff')
+
         
         buttons = ['7', '8', '9', '/',
                    '4', '5', '6', '*',
@@ -72,8 +65,7 @@ class Notepad:
             if col > 3:
                 col = 0
                 row += 1
-                self.mode = tk.StringVar(value='light')
-        tk.Button(self.master, textvariable=self.mode, command=self.toggle_mode).pack(side='bottom')
+        
     def append_text(self, input_field, text):
         input_field.insert(tk.END, text)
     
