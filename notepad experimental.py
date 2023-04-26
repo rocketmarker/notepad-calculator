@@ -5,6 +5,7 @@ class Notepad:
     def __init__(self, master):
         self.master = master
         self.master.title("Notepad")
+        self.textarea = scrolledtext.ScrolledText(self.master, undo=True, wrap='word')
         self.textarea = scrolledtext.ScrolledText(self.master, undo=True)
         self.textarea.pack(fill='both', expand=True)
         self.create_menu()
