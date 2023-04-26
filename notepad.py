@@ -5,7 +5,7 @@ class Notepad:
     def __init__(self, master):
         self.master = master
         self.master.title("Notepad")
-        self.textarea = scrolledtext.ScrolledText(self.master, undo=True)
+        self.textarea = scrolledtext.ScrolledText(self.master, undo=True, font=('Lucida Console', '10'))
         self.textarea.pack(fill='both', expand=True)
         self.create_menu()
 
@@ -45,7 +45,7 @@ class Notepad:
         top = tk.Toplevel(self.master)
         top.title("Calculator")
         
-        input_field = tk.Entry(top)
+        input_field = tk.Entry(top, font=('Lucida Console', '10'))
         input_field.grid(row=0, column=0, columnspan=4, padx=5, pady=5)
         
         buttons = ['7', '8', '9', '/',
