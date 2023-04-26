@@ -1,3 +1,4 @@
+import pdb; pdb.set_trace()
 class Notepad:
     def __init__(self, master):
         self.master = master
